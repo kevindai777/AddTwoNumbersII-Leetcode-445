@@ -34,13 +34,14 @@ let l2 = new Node(5)
 l2.next = new Node(6)
 l2.next.next = new Node(3)
 
+
 //O(n) solution that traverses each list once
 
 let string1 = ''
 let string2 = ''
 
 //Convert both linked lists to integers, then add them
-//Iterate over added integer with new linked list
+//Iterate over final integer with new linked list
 
 while (l1) {
     string1 += l1.data
@@ -52,8 +53,6 @@ while (l2) {
     l2 = l2.next
 }
 
-console.log(string1, string2)
-
 let string = (BigInt(string1) + BigInt(string2)).toString()
 let newNode = new Node(-1)
 let temp = newNode
@@ -63,4 +62,4 @@ for (let char of string) {
     temp = temp.next
 }
 
-console.log(newNode.next)
+return newNode.next
