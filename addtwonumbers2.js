@@ -35,7 +35,8 @@ l2.next = new Node(6)
 l2.next.next = new Node(3)
 
 
-//O(n) solution that traverses each list once
+//O(n + m) solution where n and m are the lengths of the two lists respectively
+//We traverse each list, add them up, then create our new linked list
 
 let string1 = ''
 let string2 = ''
